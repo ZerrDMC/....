@@ -274,7 +274,14 @@ section {
     color: var(--azul);
 }
 
-/* Tarjetas */
+    /* Tarjetas (incluyendo Noticias) */
+.cards {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
 .cards {
     max-width: 1200px;
     margin: auto;
@@ -463,12 +470,14 @@ footer {
 </section>
 
 <!-- Noticias -->
-<section id="Creditos">
+<section id="noticias">
     <h2 class="titulo">NOTICIAS</h2>
 
-    <div class="stat">
-        <h3>NUEVA VERSIÓN</h3>
-        <p>Ya está disponible el nuevo apartado donde se podrá cambiar personajes, agregar skins y más.</p>
+    <div class="cards">
+        <div class="card">
+            <h3>NUEVA VERSIÓN</h3>
+            <p>Ya está disponible el nuevo apartado donde se podrá cambiar personajes, agregar skins y más.</p>
+        </div>
     </div>
 </section>
 
