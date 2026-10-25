@@ -500,28 +500,6 @@ footer {
         </div>
     </div>
 </section>
-
-
-<audio id="musicaFondo" autoplay loop>
-    <source src="musica.mp3" type="audio/mpeg">
-</audio>
- <script>
-const musica = document.getElementById("musicaFondo");
-musica.volume = 0.35; // Aquí puedes ajustar el volumen (de 0.0 a 1.0)
-
-function iniciarMusica() {
-    musica.play().catch(() => {});
-    document.removeEventListener("click", iniciarMusica);
-    document.removeEventListener("touchstart", iniciarMusica);
-}
-
-// Intenta reproducir al cargar y si el navegador bloquea, espera el primer clic/toque
-musica.play().catch(() => {
-    document.addEventListener("click", iniciarMusica);
-    document.addEventListener("touchstart", iniciarMusica);
-});
- </script>
-    
     
     <p>® Copyright - 2026 / Chaotic Team - Todos los derechos de autor reservados</p>
 </footer>
@@ -541,8 +519,27 @@ tarjetas.forEach(card => {
 });
 </script>
 
-    
-    
+  <audio> 
+ <audio id="musicaFondo" autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+ <script>
+const musica = document.getElementById("musicaFondo");
+musica.volume = 0.35; // Aquí puedes ajustar el volumen (de 0.0 a 1.0)
+
+function iniciarMusica() {
+    musica.play().catch(() => {});
+    document.removeEventListener("click", iniciarMusica);
+    document.removeEventListener("touchstart", iniciarMusica);
+}
+
+// Intenta reproducir al cargar y si el navegador bloquea, espera el primer clic/toque
+musica.play().catch(() => {
+    document.addEventListener("click", iniciarMusica);
+    document.addEventListener("touchstart", iniciarMusica);
+});
+ </script
+     
 </body>
       </html>
       
