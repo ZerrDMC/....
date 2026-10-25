@@ -290,6 +290,7 @@ section {
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,.08);
     transition: .4s;
+    color: #325408; /* Color de letras cambiado a #325408 */
 }
 
 .card:hover {
@@ -298,25 +299,21 @@ section {
     box-shadow: 0 0 30px rgba(85,255,85,.15);
 }
 
-/* Efecto al tocar las cartas en el celular */
-.card:active {
-    border: 3px solid #000000;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
-}
-    
-    
-/* Tarjetas */
-.cards {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
+/* Color de los títulos dentro de la tarjeta */
 .card h3 {
     margin-bottom: 15px;
-    color: 325408;
+    color: #325408;
+}
+
+/* Color de los párrafos dentro de la tarjeta */
+.card p {
+    color: #325408;
+}
+
+/* Efecto permanente al hacer clic (Borde negro + Sombra interior pegada al borde) */
+.card.activa {
+    border: 3px solid #000000;
+    box-shadow: inset 0 0 0 3px #000000, inset 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 /* Video */
